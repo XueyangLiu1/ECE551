@@ -1,11 +1,7 @@
-Welcome to your ece551 git repository.
+Welcome to ece551 git repository.
 
-The first thing you should do is 
+This repo is only for myself to keep a copy of my learning history. Be careful if you ever want to copy some of them. You may be charged with academic misconduct!
 
-  git pull
+Also, the task 098 and 099 are flawed so just don't see them.
 
-Once you have done that, you will see your intial assignment. 
-As you complete assignments, more will be released.
-
-You should start with 000_submit, which will help you
-familiarize yourself with git, view-grades, and grade.
+Xueyang Liu, who leanrt ECE551 in 2020 fall.
