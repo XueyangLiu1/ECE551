@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+void error() {
+  perror("error!");
+  exit(EXIT_FAILURE);
+}
+void printSZ(char * line) {
+  size_t size = strlen(line);
+  printf("%ld", size);
+}
+void read(const char * inputName) {
+  FILE * f = fopen(inputName, "r");
+  if (f == NULL) {
+    error();
+  }
+  char * line = NULL;
+  size_t sz = 0;
+  while (getline(&line, &sz, f) >= 0) {
+    //the content of line includes '\n' at its end
+    char * nextline = strchr(line, '\n');
+    if (nextline != NULL) {
+      *nextline = '\0';
+    }
+    //use line
+    printSZ(line);
+    printf("%s", line);
+    free(line);
+    line = NULL;
+  }
+  free(line);
+  if (fclose(f) != 0) {
+    error();
+  }
+}
+
+int main(int argc, const char ** argv) {
+  if (argc != 2) {
+    error();
+  }
+  read(argv[1]);
+  return EXIT_SUCCESS;
+}
