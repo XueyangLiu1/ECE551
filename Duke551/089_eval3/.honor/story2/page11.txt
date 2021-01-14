@@ -1,0 +1,8 @@
+WIN
+#
+You return home, where your cats are very impressed with your programming
+abilities.
+
+So are the recruiters at Smaug, the world's most prestigious dragon
+simulation company. They hire you to be their newest programmer on the
+dragon vision team.

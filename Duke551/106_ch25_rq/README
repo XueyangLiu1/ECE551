@@ -1,0 +1,115 @@
+As always, read and understand Chapters 25, then answer these questions
+in "answers.txt".
+
+1. What is a DAG?
+
+A. Deterministic Acyclic Graph
+B. Directed Acyclic Graph
+C. Deterministic Analysis Graph
+D. Directed Analysis Graph
+E. None of the above
+
+2. What kind of graph do you build to apply graph coloring to resource allocation?
+
+A. Antichromatic graph
+B. Polycyclic graph
+C. Resource intensity graph
+D. Interference graph
+E. Inverse edge-weighting graph
+F. None of the above
+
+3. Dijkstra's algorithm finds:
+
+A. The minimal spanning tree of a graph
+B. The number of strongly connected components in a graph
+C. The total edge weight in a graph
+D. The shortest weighted path between two nodes in a graph
+E. None of the above.
+
+4. Prim's algorithm finds:
+
+A. The minimal spanning tree of a graph
+B. The number of strongly connected components in a graph
+C. The total edge weight in a graph
+D. The shortest weighted path between two nodes in a graph
+E. None of the above.
+
+5. Kruskal's algorithm finds:
+
+A. The minimal spanning tree of a graph
+B. The number of strongly connected components in a graph
+C. The total edge weight in a graph
+D. The shortest weighted path between two nodes in a graph
+E. None of the above.
+
+6. What term means two graphs have the same structure?
+
+A. Polymorphic
+B. Metamorphic
+C. Empamorphic
+D. Endomorphic
+E. Isomorphic
+F. Intramorphic
+G. Contramorphic
+H. None of the above
+
+7. Which of these problems is NOT NP-Complete:
+
+A. Graph coloring
+B. Strongly Connected Components
+C. Traveling Salesperson
+D. Clique
+E. Independent Set
+F. None of the above (all are NP-Complete)
+
+8. Question 25.3 in AoP shows a graph and asks you to perform Prim's algorithm
+   on it. In what order does Prim's algorithm add nodes to the MST?
+
+A. A G F B C D E 
+B. A B C D E F G
+C. A G D B C E F
+D. A G B C D E F
+E. E D C G B A F
+F. A E D C G B F
+G. A E C D B F G
+H. None of the above
+
+9. Which of the following is accurate with regards to DAG?
+
+A. Every two vertices are connected with each other.
+B. Any vertex can follow a consistent directed path to loop back to itself.
+C. It allows infinite number of edges and vertices.
+D. It may contain undirected cycles.
+
+10. Graphs can be used as a way for ...
+
+A. Path planning in map application
+B. Time scheduling for tasks
+C. Resources Allocation
+D. Social networks
+E. All of the above
+
+11. All of the following statements about adjacency list and
+    adjacency matrix are accurate except ... ?
+
+A. Adjacency lists are more space-efficient and are preferred
+   if the graph is very sparse.
+B. An Adjacency list is much faster if we want to lookup for
+   specific edge between two vertices compared with adjacency matrix.
+C. It is slower for an adjacency matrix to add or delete a vertex compared
+   to an adjacency list.
+D. Adjacency lists are more efficient for iterating over all edges in the graph.
+
+12. Which of the following is incorrect with regards to Dijkstra’s algorithm? 
+
+A. It can be used to find the shortest path from one node to every other nodes in the graph.
+B. It can be used in the applications like network routing protocols. 
+C. It can support the scenario where some edge weights are negative integers.
+D. A priority queue is often used in the implementation of Dijkstra’s algorithm.
+
+13. Which of the following properties determine whether a graph is a tree?
+
+A. It must be an undirected connected graph.
+B. There is no cycle in the graph.
+C. The number of edges equals to the number of vertices minus one.
+D. All of the above. 

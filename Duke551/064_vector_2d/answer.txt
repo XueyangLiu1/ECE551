@@ -1,0 +1,6 @@
+Vector v1 = <1.00, 2.00> and has magnitude 2.24
+Vector v2 = <-1.50, 3.00> and has magnitude 3.35
+v1 + v2 = <-0.50, 5.00>
+v1 += v2 = <-0.50, 5.00>
+Now v1 = <-0.50, 5.00>
+v1 . v2 = 15.75

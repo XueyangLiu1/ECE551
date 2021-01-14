@@ -1,0 +1,41 @@
+In this assignment, you will practice writing a simple class that
+represents a vector (in the mathematical sense of an entity with
+magnitude and direction, not the vector from the STL you will see
+later in this course).
+
+You will want to practice using good abstraction by writing the
+interface in vector.hpp and the implementation in vector.cpp.
+
+In vector.hpp, declare the class Vector2D, which should have two
+private fields, representing the x and y coordinates (we will use
+Cartesian coordinates for simplicity), double x and double y. The
+class should also have the following public member functions: 
+- void initVector(double init_x, double init_y);
+  This function initializes x and y to be the arguments passed in. We
+  will see a better way to do this later.
+- double getMagnitude() const;
+  This function returns the magnitude of the vector from the origin
+  (0, 0) to (x, y). This is given by sqrt(x^2 + y^2), for which you
+  will likely want to use functions in cmath. (Note that when you
+  include cmath, instead of math.h, it puts functions in the std
+  namespace, so you must use the fully qualified name std::sqrt.)
+  Think about why this method should be const.
+- Vector2D operator+(const Vector2D & rhs) const;
+  The overloaded + operator should do vector addition in the usual
+  way and return a copy of the new vector. Think about why the
+  parameter should be const.
+- Vector2D & operator+=(const Vector2D & rhs);
+  The overloaded += operator should add the lhs and rhs vector and
+  assign the result to the object pointed to by this.
+- double dot(const Vector2D & rhs) const;
+  This function performs the dot product operation, returning a double
+  x1*x2 + y1*y2.
+- void print() const;
+  This function should print the vector in the format <%.2f, %.2f>,
+  giving the x and y values. This is not the standard way to print an
+  object in C++, and we will see a better way later.
+
+Once you have written the class definition, you should be able to
+compile and run the code in main.cpp, getting the same output as in
+answer.txt. Of course, you should write your own tests as well and
+convince yourself that your class is correct before grading.

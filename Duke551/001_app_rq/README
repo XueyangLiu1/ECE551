@@ -1,0 +1,96 @@
+This is a "reading quiz" (as are other assignments of the form
+xx_xxx_rq). You should read Appendices A, B.1-B.5, B.12, and C.1-C.3,
+watch the videos in it, and make sure you understand the material in
+it (which may require re-reading all or part of it, asking questions,
+etc.), BEFORE attempting this quiz. This quiz will check your basic
+understanding of the material before you move on to other, more
+in-depth exercises. 
+
+Note that you should NOT do these quizzes by flipping through the book
+to find the answers. You should read the chapter and engage with the
+material until you think you understand it. Then you should do these
+quizzes to check your basic understanding without referring to the
+book. 
+
+For this quiz (and others), place your answers to the following
+questions in a file called "answers.txt". You should put one answer
+per line and can just list the letter. You may put a number before it
+if you want--the grader will look at the first letter of each line as
+your answers. When you are done, add, commit, and push the file with
+git before running "grade 001_app_rq". (Note: you can actually just
+run "grade" with no arguments if you are in the directory for the
+assignment you want to grade.)
+
+1.  What is the benefit of learning to use expert tools?
+    A.  They are easy to use.
+    B.  They often provide a graphical interface.
+    C.  At time 0, they are difficult to use.
+    D.  With time and effort, you can do more than with novice tools.
+
+2.  In UNIX, what does the ~ symbol mean?
+    A.  The current directory
+    B.  The parent directory
+    C.  The user's home directory
+    D.  The end of prompt
+
+3.  How would you access the manual page for the C library function
+    printf?
+    A.  man printf
+    B.  man -S3 printf
+    C.  help printf
+    D.  man -c printf
+
+4.  In your home directory (say your netID is gml8), you have a
+    directory named "practice" and two directories inside named "dir1"
+    and "dir2". Your current working directory is
+    /home/gml8/practice/dir1. Which one of the following uses a
+    relative path to change to dir2? 
+    A.  cd ~/practice/dir2
+    B.  cd /home/gml8/practice/dir2
+    C.  cd ../dir2
+    D.  cd dir2
+
+5.  On a UNIX system, all of the following are ways to view a file
+    myfile.txt EXCEPT: 
+    A.  open myfile.txt
+    B.  less myfile.txt
+    C.  cat myfile.txt
+    D.  head myfile.txt
+
+6.  Assuming the same directories exist as in question 4, with your
+    current working directory ~/practice/dir1, how would you copy the
+    file code.c from dir2 to dir1, renaming it mycode.c?
+    A.  cp ./mycode.c ../dir2/code.c 
+    B.  cp ../dir2/code.c ./mycode.c
+    C.  mv ./mycode.c ../dir2/code.c 
+    D.  mv ../dir2/code.c ./mycode.c
+
+7.  When you "ssh into" our course server using an SSH client on your
+    computer, which of the following activities are encrypted?
+    A.  You log in with your username and password
+    B.  You type a command to send to the server
+    C.  The server sends the output back to you
+    D.  All of the above
+
+8.  What is the key advantage of a programmer's editor such as Emacs
+    or Vim?
+    A.  They have dropdown menus with useful shortcuts.
+    B.  They allow you to stay "in the zone" without your hands
+        leaving the keyboard.
+    C.  They have features such as syntax highlighting and automatic
+        indentation.
+    D.  They provide a graphical display of your variables and their
+        values.
+
+9.  What does Emacs call "an open file"?
+    A.  buffer
+    B.  window
+    C.  document
+    D.  stream
+
+10. Say you have opened this README in Emacs, how would you open a new
+    file named "answers.txt"?
+    A.  C-z
+    B.  C-x C-c
+    C.  C-x C-f answers.txt
+    D.  M-x revert-buffer

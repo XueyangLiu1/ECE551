@@ -1,0 +1,12 @@
+LOSE
+#
+The book is the original copy of All of Programming, but the text
+disappears as soon as you touch it, apparently an associative property of
+your cloak of invisibility.
+
+You do not learn to program.
+
+In your frustration, you let out a long howl of dismay. This wakes the
+dragon, who picks you up gently between her claws and deposits you in a
+shallow pit with a large, craggy egg. You realize with terror that you are
+to be the first meal of her hatchling.

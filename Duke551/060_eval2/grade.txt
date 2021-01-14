@@ -1,0 +1,297 @@
+Grading at 10/20/2020:20:04:42.410820
+For commit ID 7be31b9f465c606e614236505a9cc054ddb2bc7d
+Grading at Tue Oct 20 16:04:16 EDT 2020
+
+=========================================================================
+Step 1
+
+Checking that story-step1 compiles
+rm -f *~ story-step1 story-step2 story-step3 story-step4 story-step1.o story-step2.o story-step3.o story-step4.o rand_story.o
+gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c rand_story.c
+gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c story-step1.c
+gcc -o story-step1 story-step1.o rand_story.o provided.o
+rm story-step1.o
++-----------------------------------------------------------------------+
+Test case 1
+Error!:argc not correct!
+Your program did not indicate a failure case
+  Oh no! It printed to stdout instead of stderr
+  It did exit with a failure status though
+                                                         [.25/0.5]
++-----------------------------------------------------------------------+
+Test case 2
+Error!:argc not correct!
+Your program did not indicate a failure case
+  Oh no! It printed to stdout instead of stderr
+  It did exit with a failure status though
+                                                         [.25/0.5]
++-----------------------------------------------------------------------+
+Test case 3
+Error!:No such template file!
+Your program did not indicate a failure case
+  Oh no! It printed to stdout instead of stderr
+  It did exit with a failure status though
+                                                         [.5/1]
++-----------------------------------------------------------------------+
+Test case 4
+Error!:No 2nd _ exists!
+Your program did not indicate a failure case
+  Oh no! It printed to stdout instead of stderr
+  It did exit with a failure status though
+                                                         [1.5/3]
++-----------------------------------------------------------------------+
+Test case 5
+Your file matched the expected output
+                                                         [4/4]
++-----------------------------------------------------------------------+
+Test case 6
+Your file matched the expected output
+                                                         [4/4]
++-----------------------------------------------------------------------+
+Test case 7
+Your file matched the expected output
+                                                         [4/4]
++-----------------------------------------------------------------------+
+Test case 8
+Your file matched the expected output
+                                                         [2/2]
++-----------------------------------------------------------------------+
+Test case 9
+Your file matched the expected output
+                                                         [2/2]
++-----------------------------------------------------------------------+
+Test case 10
+Your file matched the expected output
+                                                         [2/2]
++-----------------------------------------------------------------------+
+Test case 11
+Your file matched the expected output
+                                                         [2/2]
+
+Step 1 total                                             [22.50/25]
+
+=========================================================================
+Step 2
+
+Checking that story-step2 compiles
+rm -f *~ story-step1 story-step2 story-step3 story-step4 story-step1.o story-step2.o story-step3.o story-step4.o rand_story.o
+gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c rand_story.c
+gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c story-step2.c
+gcc -o story-step2 story-step2.o rand_story.o provided.o
+rm story-step2.o
++-----------------------------------------------------------------------+
+Test case 12
+Error!:argc not correct!
+Your program did not indicate a failure case
+  Oh no! It printed to stdout instead of stderr
+  It did exit with a failure status though
+                                                         [.25/0.5]
++-----------------------------------------------------------------------+
+Test case 13
+Error!:argc not correct!
+Your program did not indicate a failure case
+  Oh no! It printed to stdout instead of stderr
+  It did exit with a failure status though
+                                                         [.25/0.5]
++-----------------------------------------------------------------------+
+Test case 14
+Error!:No such category File!
+Your program did not indicate a failure case
+  Oh no! It printed to stdout instead of stderr
+  It did exit with a failure status though
+                                                         [.5/1]
++-----------------------------------------------------------------------+
+Test case 15
+Error!:format not correct!
+Your program did not indicate a failure case
+  Oh no! It printed to stdout instead of stderr
+  It did exit with a failure status though
+                                                         [1.5/3]
++-----------------------------------------------------------------------+
+Test case 16
+Your file matched the expected output
+                                                         [4/4]
++-----------------------------------------------------------------------+
+Test case 17
+Your file matched the expected output
+                                                         [2/2]
++-----------------------------------------------------------------------+
+Test case 18
+Your file matched the expected output
+                                                         [2/2]
++-----------------------------------------------------------------------+
+Test case 19
+Your file matched the expected output
+                                                         [2/2]
++-----------------------------------------------------------------------+
+Test case 20
+Your file matched the expected output
+                                                         [2/2]
++-----------------------------------------------------------------------+
+Test case 21
+Your file matched the expected output
+                                                         [2/2]
++-----------------------------------------------------------------------+
+Test case 22
+Your file matched the expected output
+                                                         [1/1]
+
+Step 2 total                                             [17.50/20]
+
+=========================================================================
+Step 3
+
+Checking that story-step3 compiles
+rm -f *~ story-step1 story-step2 story-step3 story-step4 story-step1.o story-step2.o story-step3.o story-step4.o rand_story.o
+gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c rand_story.c
+gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c story-step3.c
+gcc -o story-step3 story-step3.o rand_story.o provided.o
+rm story-step3.o
++-----------------------------------------------------------------------+
+Test case 23
+Error!:argc not correct!
+Your program did not indicate a failure case
+  Oh no! It printed to stdout instead of stderr
+  It did exit with a failure status though
+                                                         [.25/0.5]
++-----------------------------------------------------------------------+
+Test case 24
+Error!:argc not correct!
+Your program did not indicate a failure case
+  Oh no! It printed to stdout instead of stderr
+  It did exit with a failure status though
+                                                         [.25/0.5]
++-----------------------------------------------------------------------+
+Test case 25
+Error!:No such template file!
+Your program did not indicate a failure case
+  Oh no! It printed to stdout instead of stderr
+  It did exit with a failure status though
+                                                         [.5/1]
++-----------------------------------------------------------------------+
+Test case 26
+Error!:The integer is too big and there are no enough words to refer to!
+Your program did not indicate a failure case
+  Oh no! It printed to stdout instead of stderr
+  It did exit with a failure status though
+                                                         [1.0/2]
++-----------------------------------------------------------------------+
+Test case 27
+Error!:_ _ contains neither the category word nor an integer!
+Your program did not indicate a failure case
+  Oh no! It printed to stdout instead of stderr
+  It did exit with a failure status though
+                                                         [1.5/3]
++-----------------------------------------------------------------------+
+Test case 28
+Your file matched the expected output
+                                                         [4/4]
++-----------------------------------------------------------------------+
+Test case 29
+Your file matched the expected output
+                                                         [4/4]
++-----------------------------------------------------------------------+
+Test case 30
+Your file matched the expected output
+                                                         [4/4]
++-----------------------------------------------------------------------+
+Test case 31
+Your file matched the expected output
+                                                         [2/2]
++-----------------------------------------------------------------------+
+Test case 32
+Your file matched the expected output
+                                                         [2/2]
++-----------------------------------------------------------------------+
+Test case 33
+Your file matched the expected output
+                                                         [2/2]
+
+Step 3 total                                             [21.50/25]
+
+=========================================================================
+Step 4
+
+Checking that story-step4 compiles
+rm -f *~ story-step1 story-step2 story-step3 story-step4 story-step1.o story-step2.o story-step3.o story-step4.o rand_story.o
+gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c rand_story.c
+gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c story-step4.c
+gcc -o story-step4 story-step4.o rand_story.o provided.o
+rm story-step4.o
++-----------------------------------------------------------------------+
+Test case 34
+Error!:argc not correct!
+Your program did not indicate a failure case
+  Oh no! It printed to stdout instead of stderr
+  It did exit with a failure status though
+                                                         [.25/0.5]
++-----------------------------------------------------------------------+
+Test case 35
+Error!:Only accept filenames and '-n' option!
+Your program did not indicate a failure case
+  Oh no! It printed to stdout instead of stderr
+  It did exit with a failure status though
+                                                         [.25/0.5]
++-----------------------------------------------------------------------+
+Test case 36
+Error!:No such category File!
+Your program did not indicate a failure case
+  Oh no! It printed to stdout instead of stderr
+  It did exit with a failure status though
+                                                         [.25/0.5]
++-----------------------------------------------------------------------+
+Test case 37
+Error!:argc not correct!
+Your program did not indicate a failure case
+  Oh no! It printed to stdout instead of stderr
+  It did exit with a failure status though
+                                                         [.25/0.5]
++-----------------------------------------------------------------------+
+Test case 38
+Error!:_ _ contains neither the category word nor an integer or the cats has run out of words of some categories!
+Your program did not indicate a failure case
+  Oh no! It printed to stdout instead of stderr
+  It did exit with a failure status though
+                                                         [1.0/2]
++-----------------------------------------------------------------------+
+Test case 39
+Your file matched the expected output
+                                                         [2/2]
++-----------------------------------------------------------------------+
+Test case 40
+Your file matched the expected output
+                                                         [2/2]
++-----------------------------------------------------------------------+
+Test case 41
+Your file matched the expected output
+                                                         [4/4]
++-----------------------------------------------------------------------+
+Test case 42
+Your file matched the expected output
+                                                         [4/4]
++-----------------------------------------------------------------------+
+Test case 43
+Your file matched the expected output
+                                                         [4/4]
+
+Step 4 total                                             [18.00/20]
+
+=========================================================================
+Code quality
+
+Abstration:    Good
+Naming:        Good
+Formatting:    Excellent
+Documentation: Excellent
+Comments from your grader:
+The comments and formatting make the code easier to understand! It's also good 
+to write less comments since some of the functions are simple and direct. It's 
+recommended to use more abstraction, some of the functions in rand_story.c are 
+a bit long. Consider dividing the function into several steps to make each of 
+the function less than one page. Some of the names (e.g. dFrom, one) are a bit 
+confusing but the rest good!
+Quality total                                            [9.3/10]
+
+=========================================================================
+
+Overall Grade: 89

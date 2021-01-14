@@ -1,0 +1,7 @@
+12:Go back and take the ruby
+10:Go back and open the book
+#
+It appears to be a cloak of invisibility! You pass what should be your hand
+in front of your face, but you see nothing.
+
+Emboldened, you explore the treasure hoard further.

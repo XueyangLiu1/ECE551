@@ -1,0 +1,5 @@
+6:go 6 
+#
+this page was used to test reference page out of range
+but now we just use it to skip page5 and make that page not reachable
+after testing not-reachable, we make it normal

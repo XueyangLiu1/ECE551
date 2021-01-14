@@ -1,0 +1,17 @@
+Grading at 09/18/2020:11:18:12.535349
+For commit ID ce049e28e264b216fa603dae13ccb83997744215
+Grading at Fri Sep 18 07:18:08 EDT 2020
+Attempting to compile breaker.c 
+gcc -o breaker -pedantic -std=gnu99 -Wall -Werror breaker.c
+testcase1 passed
+#################################################
+testcase2:
+testcase2 passed
+#################################################
+testcase3:
+testcase3 passed
+#################################################
+testcase4:
+testcase4 passed
+
+Overall Grade: A

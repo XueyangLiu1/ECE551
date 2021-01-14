@@ -1,0 +1,344 @@
+Choose Your Own Adventure
+===========================================================================
+
+In this evaluative assignment, you will be writing a program that presents
+a "choose your own adventure" story (CYOA). For those of you not familiar
+with this type of story, a "choose your own adventure" book presents a
+story, but you do not read every page in order. Instead, pages end with a
+choice of where to go. E.g. a page might end with 
+
+ 1. If you want to try to sneak past the sleeping dragon, turn to page 47.  
+ 2. If you want to leave the dragon's cave and go home, turn to page 59.
+ 3. If you want to draw your sword and attack the dragon, turn to page 32. 
+
+The reader then selects one of these options, turns to the indicated page,
+and continues the story. 
+
+For our purposes, the "pages" of the adventure will be provided in a single
+directory and numbered, starting with page1.txt. See the included example
+directories. Note that we define the story as the set of consecutive page
+numbers for which files exist. What we mean by this is that you can look
+for page1.txt, page2.txt, page3.txt, etc., in order. As soon as one file
+does not exist, you can conclude that you have seen all the pages in the
+story (without having to look for other file names). Put another way there
+are no "gaps" in the numbers of pages. 
+
+Input format:
+
+The format of an input file is as follows:
+
+ 1. The first part of the file is a "navigation" section. It has exactly
+    one of the following parts.
+    
+    1a. The single word "WIN" on a line by itself
+    1b. The single word "LOSE" on a line by itself
+    1c. One or more lines which describe the choices available at the end
+        of this page. Each of these lines is a page number followed by a
+	colon, followed by text describing the choice. The page number must
+	be a positive integer. Any text is allowed after the colon, up to
+        (and including) the newline which ends it. An example of three such
+        lines would be: 
+
+47:Try to sneak past the sleeping dragon
+59:Leave the dragon's cave and go home
+32:Draw your sword and attack the dragon
+
+        Note that these three options are like the ones in the example of a
+	choose your own adventure story in the first paragraph, but we are
+	going to slightly reformat them, since the program will need to
+	know the page numbers, but the user of this program will
+	not. Furthermore, note that there is no limit to the number of
+	choices that can be presented to a user in our stories. We *could*
+	give you a story with 10,000 choices on a page, 100,000 choices on
+	a page, or even 2,000,000 choices on a page. 
+
+ 2. A single line that starts with a # sign, which separates the navigation
+    section from the text of the page. It is legal (but not required) to
+    write any text after the #. A story writer might use this line to write
+    a comment that will not appear in the story. Your program should ignore
+    anything on this line after the #. 
+
+ 3. The remainder of the file is the text of the page. You should read this
+    text and when the user is on the corresponding page, display it exactly
+    as it was in the input file. Note that any text is legal in this
+    portion of the file (there is now way any of this input can be
+    invalid).
+
+Step 1
+===========================================================================
+
+For the first part of this assignment, you should make the following:
+
+  - A C++ class Page, which represents a single page in the adventure
+    story. This class should make good use of C++'s STL to store the
+    information.
+
+  - A program cyoa-step1 that takes the name of one single page as an
+    input. This program should read the specified page, check for any
+    errors, and if no errors are found, print the page out in the format
+    described below. If any errors are found, your program should print an
+    error message and exit failure. 
+
+    Note that for this step, you are only reading one page in isolation, so
+    you cannot check if the page numbers in the choices are actually valid
+    for the story (beyond checking that they are positive numbers).
+     
+Output format:
+
+Your program (both this program, and the ones in later steps) should print
+a page with choices for what to do (i.e., not a WIN or LOSE page) as
+follows: 
+
+ 1. First, print the text of the page, exactly as it appeared in the input
+    file. 
+ 2. Next, print a blank line.
+ 3. Then print
+
+What would you like to do?
+
+ 4. Then print another blank line.
+ 5. Then print each possible choice, one per line. For each line, print a
+    space, the number of the choice, a period, and another space (e.g.
+    " 1. "). After that, print the text of the choice. Possible choices
+    should be listed in same order as in the file, which may not be the
+    same ordering as by page numbers.
+    
+For example, if the text of the page were
+
+You see a dragon sleeping in the cave
+
+and the choices were those in the example above, you would print
+
+====start of sample output=====
+You see a dragon sleeping in the cave
+
+What would you like to do?
+
+ 1. Try to sneak past the sleeping dragon
+ 2. Leave the dragon's cave and go home
+ 3. Draw your sword and attack the dragon
+====end of sample output=====
+
+If the page has WIN or LOSE instead of choices, you should
+
+ 1. First, print the text of the page, exactly as it appeared in the input
+    file. 
+ 2. Next, print a blank line.
+ 3. Then print either
+ 
+Congratulations! You have won. Hooray!
+
+    or
+
+Sorry, you have lost. Better luck next time!
+
+    You should print the former if the page is a WIN page and the latter if
+    the page is a LOSE page.
+
+    For this phase, make sure your Makefile produces cyoa-step1. As you
+    progress through the later phases, you MUST leave cyoa-step1 building
+    and working correclty (i.e., we will explicitly test this program).
+
+Hint: You should write cyoa-step1.cpp with *as little* code in it as
+possible. It should mostly make use of classes and functions that you have
+written in other files, so you can reuse them for later steps.
+
+Be sure your code compiles, test it well, and submit it before proceeding
+to the next step. 
+
+Step 2
+===========================================================================
+
+For this step, you are going to make cyoa-step2, which should let a person
+"read" the story. In particular:
+
+ 1. The cyoa-step2 program should take one single command line argument: a
+    directory name. This directory should contain the files for each page.
+    
+ 2. The program should read each page, starting at page1.txt. It is an
+    error if there is no file named page1.txt in the specified directory.
+    
+ 3. Your program should continue reading pages until a particular page does
+    not exist. Note that it is NOT an error for some pageN.txt (N > 1) to
+    not exist. It simply indicates that you have read all the pages in the
+    story. It is, however, an error if one of the pages that you read has
+    an invalid format. You do not need to check for and can ignore pages
+    more than one past the last page, e.g., if page 19 is the last page, it
+    is not an error to have a page 21, as long as nothing references it, as
+    it is not part of the story. 
+    
+ 4. After reading all pages, your program should verify the following
+    conditions are met for the story as a whole:
+    4a. Every page that is referenced by a choice is valid (e.g., if page
+        12 might send you to page 19, there needs to be a page 19 in the
+	story). 
+    4b. Every page (except page 1) is referenced by at least one *other*
+        page's choices. (e.g., if there is a page 12, then some other page
+	must have a choice to go to page 12). 
+    4c. At least one page must be a WIN page and at least one page must be
+        a LOSE page.
+	
+ 5. After checking for any problems with the story, you should begin the
+    story on page 1: 
+    5a. Display the current page.
+    5b. If the current page is WIN or LOSE, exit successfully.
+    5c. Otherwise, read a number from the user for their choice. If the
+        input is not a number, or it not valid for the choices on the page,
+        prompt the user ("That is not a valid choice, please try again")
+        and read another number. Repeat until they give a valid choice. 
+    5d. Go to the page corresponding to the choice the user selected, and
+        repeat the process until you exit in 5b (a WIN or a LOSE page). 
+
+Make sure your Makefile produces cyoa-step2 (and that cyoa-step1 still
+builds and runs correctly). Test your program well, and submit before
+moving on to the next step. 
+
+As before, we recommend that you write very little code in main, instead
+making use of functions and classes you wrote elsewhere.
+
+Step 3
+===========================================================================
+
+For this step, you will be writing a program that checks for page
+reachability. Here is what your cyoa-step3 program will do:
+
+ 1. As with Step 2, the program will take a directory as a command line
+    argument. It should read the input and check for errors as in Step 2
+    (good thing you wrote that code in a re-usable way, right?)
+    
+ 2. Generate the set of reachable pages. You should make good use of
+    std::set. A page is reachable if
+      - It is page 1
+	OR
+      - It appears in the choices of a page that is reachable
+    Conceptually, this means that if you could actually get to a page
+    through the story, it is reachable. Note that this is a stronger
+    condition than you checked in Step 2 (where you just made sure that
+    some page references it). 
+
+    Note that one way to approach this problem is to
+    2a. Start with a set containing page 1
+    2b. For each page in your set,
+          Add to the set all the pages that are the targets of that page's
+	  choices (the ones you can go directly to from the page you are
+          considering) 
+    2c. If any changes happened in 2b, go back and repeat 2b again. If not,
+        you are done (No changes means that every page was already in the
+	set).
+	
+ 3. For any page that is not reachable (not in your reachable pages set),
+    print out a message stating that it is not reachable. E.g.
+
+Page 34 is not reachable
+Page 82 is not reachable
+Page 119 is not reachable
+
+    These messages should be in numerical order (smallest page number
+    first, largest page number last).
+
+Make sure your Makefile produces cyoa-step3 (and that cyoa-step1 and
+cyoa-step2 still build and run correctly). Test your program well, and
+submit before moving on to the next step.
+
+As before, we recommend that you write very little code in main, instead
+making use of functions and classes you wrote elsewhere.
+
+Step 4
+===========================================================================
+
+For this step, you are going to write cyoa-step4 which will help you find a
+way to "win" a choose your own adventure story.
+
+For this step (and only this step), you may assume that the input story has
+no cycles in it. That is you have no possible "loops" in the story like
+Page 2 -> Page 9 -> Page 17 -> Page 2. 
+
+ 1. As with Steps 2 and 3, the program will take a directory as a command
+    line argument. It should read the input and check for errors as in Step
+    2 (you are really glad you wrote reusable code now, right?)
+
+ 2. Generate the set of reachable pages, as in Step 3 (hopefully you made
+    that reusable too...) 
+
+ 3. From the set of reachable pages, find a WIN page that is reachable.
+    3a. If there is no WIN page that is reachable, print
+
+There is no way to win
+
+    and exit.
+    3b. If there are multiple reachable winning pages, you can pick any one
+        of them (it does not matter which one).
+	  
+ 4. You can now "work backwards" from the winning page you selected to page
+    1. That is, if page 28 is winning, and page 30 has a choice that goes
+    to page 28, you can take one step back closer to the start by going to
+    page 30. When you get to page 1, you are done.
+
+    Hint: you might want to either build some data structures and/or add
+    extra information to your Page class to help with this!
+    
+    Hint 2: don't be fooled by unreachable pages that seem like a way to
+    get to where you want to be. You already have a way to get the set of
+    reachable pages, so checking for this should be easy.
+
+ 5. Once you have found one winning path (you do NOT need to find ALL
+    winning paths, just one), print out your solution in the following
+    format:
+      - For any line that isn't the WIN page,
+      
+Page (num) Choice (num)
+
+    where the first num is the page number, and the second num is the
+    choice to pick.
+      - For the winning page, print
+    
+Page (num) WIN
+     
+    where num is again the page number. For example, you might print
+
+Page 1 Choice 2
+Page 4 Choice 1
+Page 9 Choice 3
+Page 7 Choice 4
+Page 22 Choice 1
+Page 13 Choice 2
+Page 15 WIN
+
+    This means that on page one you choose choice 2, which takes you to
+    Page 4. On Page 4, you choose Choice 1, which takes you to Page 9, and
+    so on. Finally you reach Page 15, where you WIN.
+
+Make sure your Makefile produces cyoa-step4 (and that cyoa-step1 through
+cyoa-step3 still build and run correctly). Test your program well, and when
+you are satisfied, add/commit/push, and run grade.
+
+Code Quality
+===========================================================================
+
+Your code will also be graded for its quality. Your grader will assess the
+quality of the abstraction, OOP, naming, formatting, and documentation of
+your code. For this assignment, good OOP means using classes,
+public/private, const, and possibly inheritance properly. As before, you
+should make sure the functions you write use good abstraction, variable
+names are meaningful, formatting is standard (you can do this automatically
+by saving in Emacs; otherwise, you should run clang-format on your source
+code file), and that you document your work by adding a comment describing
+each of the functions you write, as well as a comment if you write anything
+complex or unusual.
+
+Reminders
+===========================================================================
+
+Your code will be graded ONCE after a hard deadline. You may run "grade" as
+many times as you like, but the last commit after which you run grade
+before the deadline will be your submission. We have provided a
+"pre-grader," which will do some basic tests, like making sure your code
+compiles and produced the expected output for the provided test cases.
+
+However, this is not a substitute for testing your code thoroughly before
+submitting and with more test cases than those provided. You should think
+of error cases, corner cases, and design your own test inputs. Your code
+should valgrind cleanly on all success cases. 
+
+This is an INDIVIDUAL assignment. You are only allowed to communicate
+regarding this assignment with an instructor or TA.

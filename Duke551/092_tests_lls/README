@@ -1,0 +1,25 @@
+For this assignment, you will be writing test cases for your next
+assignment.  As usual, the instructions for the next assignment are
+in next-README.
+
+For this assignment, you will be writing test cases (in a file called
+test-lls.cpp) for an integer linked list class with the methods
+given in il.h.  While the next assignment is writing a templated
+linked list class, you will only write test cases for the IntList
+class for now.  By now, you should be quite familiar with the idea
+of writing test cases first.
+
+We have created compiled object files (in
+/usr/local/ece551/lls/ where il.o is correct, and the files with a
+number for 'X' in ilX.o files are each broken in some way).
+
+We have provided a run_all.sh script, which will compile your
+test-lls.cpp with each object file, run your tests, and report if
+your tests failed each broken implementation (and passed the correct
+one).
+
+In il.h, you will see a function testList, which is a friends of
+IntList, which you may define in test-lls.cpp to access private
+members of IntList in your testing.
+
+Submit your test-lls.cpp file when you are done.

@@ -1,0 +1,30 @@
+LOSE
+#toaster Denevieve
+After thinking about it for a bit, you decide that Denevieve is the better
+choice. You go to her house and explain your quest. 
+
+"Why don't we make some mimosas to go with the toast, and take them to the
+dragon? That would surely placate him," she suggests. 
+
+You agree that mimosas are a great idea. Of course, it seems like you
+should probably make quite a lot of mimosas for a dragon. The two of you
+set off to the local grocery store, Troll Foods (yes, run by real
+trolls--but they are nice) and acquire supplies. You decide on 20 liters of
+orange juice and 20 liters of sparkling wine.
+
+You take the supplies back to your house and start making mimosas. As you
+do this, you remember the most important thing you learned in Denevieve's
+class: testing is important. The first mimosa is great, but you remember
+that one test case is not enough. After 10 mimosas worth of test cases, you
+are very sure that they are good, but also that you are really drunk. 
+
+You take your remaining mimosas to the dragon's cave and call out to him 
+
+"Hey dagron. I've gotss some drinkss and toasht for you."
+
+The dragon slithers out of his cave intrigued by your offer. As you go to
+make toast, you realize you are too drunk to operate your magic toaster. 
+
+The dragon eats you instead, while sipping on a mimosa.
+
+You have been eaten by a dragon.

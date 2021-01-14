@@ -1,0 +1,13 @@
+Read expression: 
+End of line found mid expression!
+Could not parse expression, please try again.
+Read expression: (+ 2 (+    -10 -10)
+Expected ) but found 
+Could not parse expression, please try again.
+Read expression: (+ 2
+End of line found mid expression!
+Could not parse expression, please try again.
+Read expression: 							)
+Expected a number, but found )
+
+Could not parse expression, please try again.

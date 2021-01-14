@@ -1,0 +1,12 @@
+In this short assignment, you will add constructors to the Vector2D
+class you previously defined. 
+
+Your only task is to modify your class in vector.hpp and vector.cpp to
+have two different constructors, described below. Make sure you use an
+initializer list.
+  1.  Copy your vector.hpp and vector.cpp files to this directory.
+  2.  Define the default constructor, which should initialize both x and y to 0.
+  3.  Define a constructor that takes in two arguments representing
+      the x and y coordinates of the vector and initializes x and y.
+
+You may remove initVector, as you will no longer need it.

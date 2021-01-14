@@ -1,0 +1,8 @@
+LOSE
+#alone
+After thinking about it for a bit, you decide to go alone. You head off
+into the hills by yourself in search of the dragon. Unfortunately, while
+you are walking and trying to think up a plan, the dragon swoops down
+behind you and devours you. 
+
+You have been eaten by a dragon.

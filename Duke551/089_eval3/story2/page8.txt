@@ -1,0 +1,8 @@
+11:Exult in your skillset and go home
+4:Stab the dragon in the neck
+#
+The book is the original copy of All of Programming. You pore over its
+contents, internalizing its every lesson.
+
+Equipped with its knowledge, you sneak back to where the dragon is
+sleeping. 

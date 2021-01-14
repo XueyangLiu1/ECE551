@@ -1,0 +1,27 @@
+WIN
+#shoes, Denevieve
+After thinking about it for a bit, you decide Denevieve is a better
+choice. After all she teaches undergraduate Dynamics, so surely that can
+help you fight a dragon? 
+
+After you explain your quest and demonstrate your magic shoes, Denevieve
+pulls out a whiteboard and explains how to make it work: 
+
+"First, we need to model the dragon as a rigid body and your magic shoes as
+a point mass. Then we apply Lagrange’s Equations and... hmm this would be
+much easier if the dragon's cave were a frictionless surface, but we
+probably can't assume that, so instead (she writes big complicated equation
+and does a bunch of calculus)... Ok, you need to jump right here on the top
+of the dragon's head." She says, indicating a point on the dragon's head in
+her free-body diagram. 
+
+The two of you set off to the dragon's cave, and you carefully jump at
+exactly the right place while Denevieve distracts the dragon with a lecture
+about Coulomb friction. Your mighty jump knocks the dragon
+unconscious. While the dragon is passed out, you tie him up.
+
+When the dragon wakes up, you work out an agreement where the dragon will
+learn C++ programming and earn his food by writing software instead of
+stealing it. 
+
+Everyone lives happily ever after.

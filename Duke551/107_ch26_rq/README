@@ -1,0 +1,79 @@
+As always, read and understand Chapters 26, then answer these questions
+in "answers.txt".
+
+1. Which of the following best describes "shaker sort"?
+
+A. An optimization on merge sort which improves its locality.
+B. An optimization on bubble sort which improves its constant factors, but not its Big-O
+C. An optimization on selection sort which improves its Big-O
+D. The only know O(N) sorting algorithm.
+E. None of the above.
+
+2. What is the disadvantage of quick sort?
+
+A. Poor locality
+B. Requires additional space
+C. O(N^2) in the common case.
+D. Although it is O(N*lg(N)) in most cases, it requires O(N^2) time in the worst case
+E. None of the above
+
+3. What is the disadvantage of merge sort?
+
+A. Poor locality
+B. Requires additional space
+C. O(N^2) in the common case.
+D. Although it is O(N*lg(N)) in most cases, it requires O(N^2) time in the worst case
+E. None of the above
+
+4. What is the disadvantage of heap sort?
+
+A. Poor locality
+B. Requires additional space
+C. O(N^2) in the common case.
+D. Although it is O(N*lg(N)) in most cases, it requires O(N^2) time in the worst case
+E. None of the above
+
+5. What does it mean for a sort to be "stable"?
+
+A. It is guaranteed to give the right answer
+B. Its running time does not depend on the values of the data
+C. Equal elements remain in the same order
+D. It has a steady job.
+E. None of the above.
+
+6. Introspection sort combines which two sorts?
+
+A. Quick sort and merge sort
+B. Merge sort and shaker sort
+C. Selection sort and insertion sort
+D. Quick sort and heap sort
+E. Panicsort and jobinterviewquicksort
+F. None of the above
+
+7. What is the advantage of selection sort?
+
+A. Good stability.
+B. Linear time complexity.
+C. Constant space complexity.
+D. Efficient on large-scale data sorting.
+
+8. Which of the following situation may result in the worst case in quick sort?
+
+A. Each time we choose the first element as the pivot. 
+B. Each time we choose the last element as the pivot. 
+C. Each time we choose the middle element as the pivot. 
+D. Each time we choose the smallest or largest element as the pivot. 
+
+9. Which sorting algorithm is hard to parallelize?
+
+A. Merge sort
+B. Heap sort
+C. Quick sort
+D. Odd-even sort
+
+10. Which sorting algorithm is not stable?
+
+A. Bubble sort
+B. Insertion sort
+C. Merge sort
+D. Quick sort

@@ -1,0 +1,13 @@
+2:Try to sneak past the sleeping dragon
+3:Leave the dragon's cave and go home
+4:Stab the dragon in the neck
+#
+One bright weekend afternoon, you decide to adventure, putting on your Ring
+of the Niebelungen and traveler's cloak and strapping the famed sword Ice
+to your back.
+
+Half-way up the mountain Matterhorn, you see a cave opening with steam
+coming out. You enter the cave and tiptoe inside, straining your eyes in
+the gloomy mist.
+
+You encounter a dragon.

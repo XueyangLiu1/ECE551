@@ -1,0 +1,197 @@
+In this evaluative assignment, you will write four pieces of a program to
+analyze COVID-19 data by country. Our sample data comes from this source: 
+https://ourworldindata.org/coronavirus. The file daily_cases.csv has the
+case data for nine countries from 12/31/19 to 8/17/20. Each of these
+countries and their population is given in population.csv. The first month
+of case data is given in daily_small.csv.
+
+You have two provided source code files: pandemic.h and pandemic.c. In
+pandemic.h, you see a struct for a country with information about its name
+and population. You should not modify anything in this file. Next are four
+function prototypes for functions you will write in each step. In
+pandemic.c, you see the definitions of each of the four functions, which
+you will write.
+
+Your grade comprises the four steps and code quality with the following
+breakdown:
+
+Step 1:        30
+Step 2:        20
+Step 3:        20
+Step 4:        20
+Code quality:  10
+-----------------
+Total:        100
+
+Step 1
+===========================================================================
+
+Write the function parseLine, which takes a string in the form
+
+country name,population
+
+such as those in population.csv, and returns a country_t. Our program will
+call your version of this function on each line of an input file. A valid
+country name can be any sequence of characters, except a comma, that fits
+in the "name" field of a country_t struct. The population is the data after
+the comma, where a valid population must represent a number that fits in
+the "population" field of a country_t struct. If there are any errors in
+the input file, including values that cannot be represented with the data
+types we have described, print an appropriate error message and exit with a
+failure status.
+
+Test your code thoroughly before moving on to the next step. We have
+provided a Makefile, so you can do
+
+make printCountries
+
+and your code will be linked with ours, so you can test this step like
+this:
+
+./printCountries population.csv
+
+Of course, you should test with many more inputs than those provided to be
+confident your code works well.
+
+Be sure to git add, commit, and push your code when you are done testing
+this step.
+
+Step 2
+===========================================================================
+
+Write the function calcRunningAvg, which calculates the seven-day running
+average of case data. It takes an array of daily case data, the number of
+days over which the data is measured, and an array of doubles "avg", which
+is where you will write the result of the calculation, and returns void.
+
+The seven-day running average is the arithmetic mean of seven days of daily
+case data, so as an example, in the seven days starting from 2/26/20 in the
+United States, the average is:
+
+(0 + 6 + 1 + 6 + 3 + 20 + 14) / 7 = 7.142
+
+(Note: this result is rounded because the calculation was performed by
+hand. You should store your results to double precision.) This statistic of
+a running average "smoothes" the data. Because there are seven pieces of
+data needed to do a calculation, parameter avg has length n_days - 6. 
+
+Test your code thoroughly before moving on to the next step by doing
+
+make printRunningAvg
+
+and your code will be linked with ours, so you can test this step like
+this:
+
+./printRunningAvg population.csv daily_small.csv
+
+Of course, you should test with many more inputs than those provided to be
+confident your code works well.
+
+Be sure to git add, commit, and push your code when you are done testing
+this step.
+
+Step 3
+===========================================================================
+
+Write the function calcCumulative, which calculates the cumulative number
+of cases that day per 100,000 people, i.e., the sum of all the cases in
+that country so far per 100,000 people. It takes an array of daily case
+data, the number of days over which the data is measured, the population
+for that country, and an array of doubles "cum", which is where you will
+write the result of the calculation, and returns void. Array "cum" has
+length n_days. 
+
+For example, the first seven cumulative cases in China are:
+
+27 27 27 44 44 59 59
+
+so, the first seven cumulative cases per 100,000 people in China
+(population 1,439,323,774) would be:
+
+0.002 0.002 0.002 0.003 0.003 0.004 0.004
+
+Note: these values are rounded, but you should use double precision in
+writing to array "cum".
+
+As always, you should test your code thoroughly before moving on to the
+next step. For this step you can do
+
+make printCumulative
+
+and test
+
+./printCumulative population.csv daily_small.csv
+
+Of course, you should test with many more inputs than those provided to be
+confident your code works well.
+
+Be sure to git add, commit, and push your code when you are done testing
+this step.
+
+Step 4
+===========================================================================
+
+Write the function printCountryWithMax, which finds the maximum number of
+daily cases of all countries represented in the data, over the entire time
+period. It takes an array of country_t's with length n_countries, a 2-D
+array of data, with each country's data representing a row (so data[0] is
+the zeroth country's time series data) of n_days and returns void.
+
+This function should find the country with the maximum daily cases for any
+day and the number of cases for that day and print its answer in the form:
+
+printf("%s has the most daily cases with %u\n", country_name, number_cases);
+
+If there is a tie, you can print either country name.
+
+As always, you should test your code thoroughly before moving on to the
+next step. For this step you can do
+
+make printDailyMax
+
+and test
+
+./printDailyMax population.csv daily_small.csv
+
+Your program should produce one line of output, for this case:
+
+China has the most daily cases with 1980
+
+(This was for January 31, 2020. For those of you following the global case
+data, you know that other countries had much higher numbers in later
+months.)
+
+Of course, you should test with many more inputs than those provided to be
+confident your code works well.
+
+Be sure to git add, commit, and push your code when you are done testing
+this step.
+
+Code Quality
+===========================================================================
+
+Your code will also be graded for its quality. Your grader will assess the
+quality of the abstraction, naming, formatting, and documentation of your
+code. For this assignment, make sure the functions you write do not get too
+long, variable names are meaningful, formatting is standard (you can do
+this automatically by saving in Emacs; otherwise, you should run
+clang-format on your source code file), and that you document your work by
+adding a comment describing each of the functions you write, as well as a
+comment if you write anything complex or unusual. 
+
+Reminders
+===========================================================================
+
+Your code will be graded ONCE after a hard deadline. You may run "grade" as
+many times as you like, but the last commit after which you run grade
+before the deadline will be your submission. We have provided a
+"pre-grader," which will do some basic tests, like making sure your code
+compiles and produced the expected output for the provided test cases.
+
+However, this is not a substitute for testing your code thoroughly before
+submitting and with more test cases than those provided. You should think
+of error cases, corner cases, and design your own test inputs. Your code
+should valgrind cleanly on all success cases. 
+
+This is an INDIVIDUAL assignment. You are only allowed to communicate
+regarding this assignment with an instructor or TA.

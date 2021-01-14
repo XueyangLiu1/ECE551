@@ -1,0 +1,26 @@
+11:Go to Denevieve for help.
+12:Go to Grew for help.
+7:Go alone.
+#toaster
+As you take the magic toaster from the wizard's hand, he disappears in a
+puff of smoke. You decide that you should give the toaster a try before you
+set off to deal with the dragon (after all, if you learned nothing else in
+school, it was that testing is VERY important). 
+
+Having not had any breakfast, you are quite hungry, so testing the toaster
+seems like a great solution to two problems. You grab a rock off the
+ground, stuff it in, and think of delicious toast with raspberry jam. A few
+seconds later, out pops the most perfectly done toast with just the right
+amount of butter and jam. Wow that is good! You spend a while longer
+testing the toaster again and again "just to be sure". After you are
+stuffed on toast, you start to wonder how this will help you with the
+dragon. 
+
+Putting that question in the back of your mind, you contemplate whether or
+not you should get some help before you set out. On the one hand, if you go
+alone, you might be able to better sneak into the dragon's lair. On the
+other hand, help might be useful.
+
+Fortunately for you, the two wisest people you know, Denevieve and Grew,
+live in the next village over. Thinking about it for several minutes, you
+decide whom to go to for help.
